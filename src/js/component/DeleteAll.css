@@ -1,0 +1,10 @@
+.delete {
+    bottom: 0;
+    position: fixed;
+    padding:1rem;
+    border-radius: 5px;
+    background-color: purple;
+    border-width: 0;
+    color: white;
+    margin-bottom: 1rem;
+}
