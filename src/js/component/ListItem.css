@@ -4,3 +4,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-label {
+    margin-bottom: 0;
+}

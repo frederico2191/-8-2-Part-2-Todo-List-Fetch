@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react'
 import ListItem from './ListItem.jsx'
 
-const List = ({ tasks, onAddToDo, onRemoveTask }) => {
+const List = ({ tasks, onAddToDo, onRemoveTask, onMarkDone }) => {
   const [enteredToDo, setEnteredToDo] = useState('a')
   const [error,setError] = useState({});
 
@@ -35,8 +35,8 @@ const List = ({ tasks, onAddToDo, onRemoveTask }) => {
         </div>}
 
       {!tasks.length ? <h5>No tasks, add a task</h5> : (
-        tasks.map(({ id, task })=>(
-          <ListItem key={id} id={id} task={task} onRemoveTask={onRemoveTask}/>
+        tasks.map(({ id, label, done })=>(
+          <ListItem key={id} id={id} label={label} onRemoveTask={onRemoveTask} onMarkDone={onMarkDone} done={done}/>
         ))
       )} 
     </div>
