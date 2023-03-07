@@ -14,10 +14,10 @@ const  ListItem = ({ id, label, onRemoveTask, onMarkDone, done }) => {
   return (
     <div className='item' onMouseOver={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="item-content">
-        <input type="checkbox" checked={done} onChange={handleSetMarked}/>
+        <input type="checkbox" checked={done} onChange={handleSetMarked} id="item-checkBox"/>
         <p className="item-label">{label}</p>
-      </div>
-      {isHovered && <TfiTrash onClick={removeItem}/>}
+      </div >
+      {isHovered && <TfiTrash className='trashIcon' onClick={removeItem}/>}
     </div>
   )
 }

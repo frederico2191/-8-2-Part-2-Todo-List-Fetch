@@ -3,6 +3,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(228, 155, 147);
+    background-color: rgb(248, 248, 248);
+    margin: 1rem 1rem 2rem;
+    
+}
+.item:last-child {
+    margin-bottom: 0.01rem;
+}
+
+.item:first-child {
+    margin-top: 2rem;
 }
 
 .item-content {
@@ -10,8 +21,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 200;
+   
 }
 
 .item-label {
     margin-bottom: 0;
+}
+
+.trashIcon {
+    font-size: larger;
+    color: red;
+}
+
+#item-checkBox {
+    margin-right: 1rem;
 }

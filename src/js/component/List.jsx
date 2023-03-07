@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react'
 import ListItem from './ListItem.jsx'
+import "./List.css"
 
 const List = ({ tasks, onAddToDo, onRemoveTask, onMarkDone }) => {
-  const [enteredToDo, setEnteredToDo] = useState('a')
+  const [enteredToDo, setEnteredToDo] = useState('')
   const [error,setError] = useState({});
 
   const addToDoHandler = (event) =>{
@@ -12,7 +13,8 @@ const List = ({ tasks, onAddToDo, onRemoveTask, onMarkDone }) => {
           setError({
               title: "Invalid Input",
               message: "Please enter a valid name and age"
-          })
+          });
+          return
       }
       onAddToDo(enteredToDo);
       setEnteredToDo('');
@@ -23,10 +25,10 @@ const List = ({ tasks, onAddToDo, onRemoveTask, onMarkDone }) => {
     }
 
   return (
-    <div>
+    <div className='form'>
       <form onSubmit={addToDoHandler}>
-        <input type="text" onChange={toDoHandler} value={enteredToDo}></input>
-        <button type="submit"> Add a Task</button>
+        <input  size="35" type="text" onChange={toDoHandler} value={enteredToDo} placeholder="What needs to be done?"></input>
+        <button type="submit" className='form-AddTaskButton'> Add a Task</button>
       </form>
 
       {error && <div>

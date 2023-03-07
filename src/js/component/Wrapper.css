@@ -1,8 +1,7 @@
 .wrapper {
-    background-color: beige;
-    margin-left: 15rem;
-    margin-right: 15rem;
+    background-color: rgb(244,243,243);
     margin-top: 5rem;
+    width: 500px;
     height: 700px;
     display: flex;
     flex-direction: column;
